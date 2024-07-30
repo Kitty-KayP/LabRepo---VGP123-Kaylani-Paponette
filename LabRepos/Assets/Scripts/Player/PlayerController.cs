@@ -62,8 +62,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //AnimatoprClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
+
         //Create a small overlap collider to check if we are touching the ground
         IsGrounded();
+
+        //Animation check for our physics
+        //if (curPlayingClips.Length > 0)
+        //{
+        //    if (curPlayingClips[0].clip.name == "Attack" && isGrounded)
+        //        rb.velocity = new Vector2.(0, rb,velocity.y);
+        //    else
+        //    {
+        //        rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
+        //    }
+
+        //}
+
+
 
         //grab horizontal axis - Check Project Settings > Input Manage4r to see the inputs defined 
         float hInput = Input.GetAxis("Horizontal");
@@ -93,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("hInput", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
-        
+
     }
     void IsGrounded()
     {
@@ -107,4 +123,15 @@ public class PlayerController : MonoBehaviour
         else
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
     }
+    //void OnTriggerEvent2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("OneUp"))
+    //    {
+    //        Destroy(other.gameObject);
+    //        // Perform actions when the player collects the object
+    //        // Add score, play a sound, or activate a power-up
+    //        //Collect();
+    //    }
+    //}
+
 }

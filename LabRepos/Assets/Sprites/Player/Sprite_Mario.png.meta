@@ -1265,7 +1265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_55
+      name: JumpAttack2
       rect:
         serializedVersion: 2
         x: 254
@@ -1286,7 +1286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_56
+      name: JumpAttack3
       rect:
         serializedVersion: 2
         x: 286
@@ -1295,7 +1295,7 @@ TextureImporter:
         height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 1, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1307,7 +1307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpAttack2
+      name: JumpAttack4
       rect:
         serializedVersion: 2
         x: 315
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_58
+      name: JumpAttack5
       rect:
         serializedVersion: 2
         x: 345
@@ -1406,7 +1406,10 @@ TextureImporter:
       Jump: 425461362
       JumpAttack: 1748518383
       JumpAttack1: 1232716506
-      JumpAttack2: 1560189078
+      JumpAttack2: -772173608
+      JumpAttack3: 1435741546
+      JumpAttack4: 1560189078
+      JumpAttack5: -353333682
       MarioWalk: -690131325
       MarioWalk1: -446522839
       MarioWalk2: 481678921
@@ -1455,9 +1458,6 @@ TextureImporter:
       Sprite_Mario_50: 1607788735
       Sprite_Mario_51: 551705062
       Sprite_Mario_52: -1482781640
-      Sprite_Mario_55: -772173608
-      Sprite_Mario_56: 1435741546
-      Sprite_Mario_58: -353333682
       Sprite_Mario_59: 1764584359
       Sprite_Mario_60: -978150311
       Sprite_Mario_7: -1914143504
