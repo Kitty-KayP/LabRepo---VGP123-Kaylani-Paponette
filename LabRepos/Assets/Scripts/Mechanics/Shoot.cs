@@ -89,7 +89,7 @@ public class Shoot : MonoBehaviour
         else
         {
             Projectile curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, Quaternion.identity);
-            curProjectile.SetVelocity(xVel, yVel);
+            curProjectile.SetVelocity(-xVel, yVel);
         }
     }
 }

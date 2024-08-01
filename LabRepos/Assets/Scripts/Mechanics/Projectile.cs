@@ -51,4 +51,14 @@ public class Projectile : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(xVel, yVel);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("OneUp"))
+            Destroy(this.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(this.gameObject);
+    }
 }
