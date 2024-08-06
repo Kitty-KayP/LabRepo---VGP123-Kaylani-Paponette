@@ -96,7 +96,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 9091344085238028880}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 096e03a61b1f76e4f9c80886336913c1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbd57e79324d3442be98d0ffdf7b4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 6.2
+  lifetime: 2

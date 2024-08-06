@@ -57,8 +57,18 @@ public class Projectile : MonoBehaviour
             Destroy(this.gameObject);
     }
 
+    //my code 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Destroy(this.gameObject);
+    //}
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        if (collision.gameObject.CompareTag("Wall"))
+        Destroy(gameObject);
+
+        //if collision.gameObject.CompareTag("Player") && CompareTag("EnemyProjectile"))
+        //    //do logic when player is hit by enemy projectile
     }
 }
