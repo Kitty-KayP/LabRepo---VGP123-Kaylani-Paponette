@@ -6158,7 +6158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_288
+      name: EnemyProjectile
       rect:
         serializedVersion: 2
         x: 801
@@ -6284,7 +6284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_294
+      name: TurretDeath1
       rect:
         serializedVersion: 2
         x: 860
@@ -6305,7 +6305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_295
+      name: TurretDeath3
       rect:
         serializedVersion: 2
         x: 871
@@ -6326,12 +6326,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_296
+      name: TurretDeath
       rect:
         serializedVersion: 2
         x: 882
         y: 361
-        width: 13
+        width: 4
         height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -7124,7 +7124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_334
+      name: TurretFire1
       rect:
         serializedVersion: 2
         x: 800
@@ -7145,7 +7145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_335
+      name: TurretFire2
       rect:
         serializedVersion: 2
         x: 823
@@ -7166,7 +7166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_336
+      name: TurretFire3
       rect:
         serializedVersion: 2
         x: 852
@@ -7187,7 +7187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_337
+      name: TurretFireIdle
       rect:
         serializedVersion: 2
         x: 881
@@ -9665,15 +9665,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_455
+      name: KoopaTurn
       rect:
         serializedVersion: 2
         x: 9
         y: 123
         width: 16
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9686,15 +9686,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_456
+      name: KoopaWalk1
       rect:
         serializedVersion: 2
         x: 27
         y: 123
         width: 16
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9707,15 +9707,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_457
+      name: KoopaWalk2
       rect:
         serializedVersion: 2
         x: 46
         y: 123
         width: 16
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9917,15 +9917,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_467
+      name: KoopaDeath
       rect:
         serializedVersion: 2
         x: 250
         y: 137
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10589,15 +10589,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_499
+      name: Enemy Squish
       rect:
         serializedVersion: 2
         x: 250
         y: 120
         width: 16
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -14536,6 +14536,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TurretDeath4
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 362
+        width: 3
+        height: 3
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4af9b14879aaee4fa0472fe7b35cb03
+      internalID: -1308653021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TurretDeath5
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 353
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9b771c774fa9b4caee774534e08248
+      internalID: 1462841660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -14548,6 +14590,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BombIdle: -800519198
+      Enemy Squish: 545477849
+      EnemyProjectile: 792355171
+      KoopaDeath: -1274632768
+      KoopaTurn: -1427186889
+      KoopaWalk1: -1832221286
+      KoopaWalk2: 745303551
       PlayerProjectile: 1649109368
       Sprite_Enemies_0: 92772581
       Sprite_Enemies_1: 898581615
@@ -14759,16 +14807,12 @@ TextureImporter:
       Sprite_Enemies_285: -144266416
       Sprite_Enemies_286: -1622279376
       Sprite_Enemies_287: -1907621798
-      Sprite_Enemies_288: 792355171
       Sprite_Enemies_289: -762136246
       Sprite_Enemies_29: -1327311510
       Sprite_Enemies_290: -1187936540
       Sprite_Enemies_291: -125809826
       Sprite_Enemies_292: -884402630
       Sprite_Enemies_293: 1616643404
-      Sprite_Enemies_294: 567875508
-      Sprite_Enemies_295: 842776399
-      Sprite_Enemies_296: -1363765665
       Sprite_Enemies_297: 1940503738
       Sprite_Enemies_298: -57807123
       Sprite_Enemies_299: -377680227
@@ -14811,10 +14855,6 @@ TextureImporter:
       Sprite_Enemies_331: 260035097
       Sprite_Enemies_332: 1947664589
       Sprite_Enemies_333: 2034419689
-      Sprite_Enemies_334: 1762744559
-      Sprite_Enemies_335: -645793339
-      Sprite_Enemies_336: 2142822395
-      Sprite_Enemies_337: 21498521
       Sprite_Enemies_338: -202713605
       Sprite_Enemies_339: -1196722185
       Sprite_Enemies_34: 1357398382
@@ -14944,9 +14984,6 @@ TextureImporter:
       Sprite_Enemies_452: 1543185826
       Sprite_Enemies_453: 621286446
       Sprite_Enemies_454: -289124472
-      Sprite_Enemies_455: -1427186889
-      Sprite_Enemies_456: -1832221286
-      Sprite_Enemies_457: 745303551
       Sprite_Enemies_458: -1997083573
       Sprite_Enemies_459: 1606730755
       Sprite_Enemies_46: 343054532
@@ -14957,7 +14994,6 @@ TextureImporter:
       Sprite_Enemies_464: 1009095895
       Sprite_Enemies_465: -329832596
       Sprite_Enemies_466: 201592016
-      Sprite_Enemies_467: -1274632768
       Sprite_Enemies_468: -1200368158
       Sprite_Enemies_469: -2086188108
       Sprite_Enemies_47: 534095484
@@ -14992,7 +15028,6 @@ TextureImporter:
       Sprite_Enemies_496: -211405227
       Sprite_Enemies_497: -2085700350
       Sprite_Enemies_498: 814108730
-      Sprite_Enemies_499: 545477849
       Sprite_Enemies_5: -860310895
       Sprite_Enemies_50: 1008510654
       Sprite_Enemies_500: 409234114
@@ -15234,6 +15269,15 @@ TextureImporter:
       Sprite_Enemies_97: 2095296263
       Sprite_Enemies_98: 1377922293
       Sprite_Enemies_99: -1115467741
+      TurretDeath: -1363765665
+      TurretDeath1: 567875508
+      TurretDeath3: 842776399
+      TurretDeath4: -1308653021
+      TurretDeath5: 1462841660
+      TurretFire1: 1762744559
+      TurretFire2: -645793339
+      TurretFire3: 2142822395
+      TurretFireIdle: 21498521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

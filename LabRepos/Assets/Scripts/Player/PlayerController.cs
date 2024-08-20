@@ -223,15 +223,19 @@ public class PlayerController : MonoBehaviour
         else
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
     }
-    //void OnTriggerEvent2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("OneUp"))
-    //    {
-    //        Destroy(other.gameObject);
-    //        // Perform actions when the player collects the object
-    //        // Add score, play a sound, or activate a power-up
-    //        //Collect();
-    //    }
-    //}
+    void IncreaseGravity()
+    {
+        rb.gravityScale = 10;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Squish"))
+        {
+            collision.gameObject.GetComponentInParent<Enemy>().TakeDamage(9999);
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
 
 }
