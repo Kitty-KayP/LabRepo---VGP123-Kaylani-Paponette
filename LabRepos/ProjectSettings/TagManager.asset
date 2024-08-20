@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - Wall
   - Barrier
+  - Squish
   layers:
   - Default
   - TransparentFX

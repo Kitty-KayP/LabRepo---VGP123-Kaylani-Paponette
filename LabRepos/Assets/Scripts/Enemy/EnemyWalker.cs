@@ -24,6 +24,7 @@ public class EnemyWalker : Enemy
     {
 
         //do something tto trigger our squish animation
+        //issue was damage == to 999 instead of 9999
         if (damage == 9999)
         {
             anim.SetTrigger("Squish");
