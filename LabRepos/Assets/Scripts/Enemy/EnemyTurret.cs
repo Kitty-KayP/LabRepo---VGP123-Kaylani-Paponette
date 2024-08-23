@@ -24,13 +24,24 @@ public class EnemyTurret : Enemy
     {
         AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
 
+        float distance = Vector3.Distance(GameObject.Find("Player").transform.position, GameObject.Find("Turret").transform.position);
+
         if (curPlayingClips[0].clip.name.Contains("Idle"))
         {
-            if (Time.time >= timeSinceLastFire + projectileFireRate)
+            if (Time.time >= timeSinceLastFire + projectileFireRate && distance <= 4.0f)
             {
                 anim.SetTrigger("Fire");
                 timeSinceLastFire = Time.time;
             }
+        }
+
+        if (GameObject.Find("Player").transform.position.x < GameObject.Find("Turret").transform.position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
         }
     }
 }
