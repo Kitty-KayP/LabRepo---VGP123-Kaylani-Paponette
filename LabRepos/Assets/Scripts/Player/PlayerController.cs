@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
-public class PlayerController : MonoBehaviour  
+public class PlayerController : MonoBehaviour
 {
     //Player gameplay variables
     private Coroutine jumpForceChange;
@@ -18,17 +15,15 @@ public class PlayerController : MonoBehaviour
 
         if (type == Pickup.PickupType.PowerupJump)
             StartPowerupCoroutine(ref jumpForceChange, ref jumpForce, type);
-
     }
 
     public void StartPowerupCoroutine(ref Coroutine InCoroutine, ref float inVar, Pickup.PickupType type)
     {
-        if (jumpForceChange != null)
+        if (InCoroutine != null)
         {
             StopCoroutine(InCoroutine);
             InCoroutine = null;
             inVar /= 2;
-
         }
 
         InCoroutine = StartCoroutine(PowerupChange(type));
@@ -41,14 +36,12 @@ public class PlayerController : MonoBehaviour
             speed *= 2;
 
         if (type == Pickup.PickupType.PowerupJump)
-            jumpForce *=2;
+            jumpForce *= 2;
 
-
-        Debug.Log($"Jump force value is {jumpForce}, Speed Value is {speed}");
+        Debug.Log($"Jump force value is {jumpForce}, Speed value is {speed}");
 
         yield return new WaitForSeconds(5.0f);
 
-        //this code runs after the wait
         if (type == Pickup.PickupType.PowerupSpeed)
         {
             speed /= 2;
@@ -60,92 +53,43 @@ public class PlayerController : MonoBehaviour
             jumpForceChange = null;
         }
 
-
-        Debug.Log($"Jump force value is {jumpForce}");
-
-
+        Debug.Log($"Jump force value is {jumpForce}, Speed value is {speed}");
     }
-
-    //Private Lives Variable
-    private int _lives = 5;
-
-    //public variable for getting and setting lives
-
-    public int lives
-    {  
-        get 
-        { 
-            return _lives; 
-        }
-        set
-        {
-            //all lives lost (zero counts as a life due to the check)
-            if (value < 0)
-            {
-                //game over function called here
-                //return to prevent the rest of the function to be called
-                return;
-            }
-
-            //lost a life
-            if (value < _lives)
-            {
-                //Respawn function called he re
-
-            }
-
-            if (value > maxLives)
-            {
-                value = maxLives;
-            }
-
-            _lives = value;
-
-            Debug.Log($"Lives value on {gameObject.name} has changed to {lives}");
-        }
-    }
-
-    //max lives possible
-    [SerializeField] private int maxLives = 10;
 
     //Movement Variables
-    [SerializeField, Range (1, 20)] private float speed = 5;
+    [SerializeField, Range(1, 20)] private float speed = 5;
     [SerializeField, Range(1, 20)] private float jumpForce = 10;
     [SerializeField, Range(0.01f, 1)] private float groundCheckRadius = 0.02f;
     [SerializeField] private LayerMask isGroundLayer;
- 
 
-    //GroundCHeck Stuff 
+    //GroundCheck Stuff
     private Transform groundCheck;
     private bool isGrounded = false;
 
-    //Component References 
-        
+    //Component References
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
 
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
-        //Component References Filled 
+        //Component References Filled
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
-        // Debug.Log(rb.name);
 
         //Checking values to ensure non garbage data
         if (speed <= 0)
         {
             speed = 5;
-            Debug.Log("Speed was set Incorrectly");
+            Debug.Log("Speed was set incorrectly");
         }
 
         if (jumpForce <= 0)
         {
             jumpForce = 10;
-            Debug.Log("jumpForce was set Incorrectly");
+            Debug.Log("JumpForce was set incorrectly");
         }
 
         //Creating groundcheck object
@@ -162,55 +106,58 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //AnimatoprClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
+        AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
+        //grab horizontal axis - Check Project Settings > Input Manager to see the inputs defined
+        float hInput = Input.GetAxis("Horizontal");
 
         //Create a small overlap collider to check if we are touching the ground
         IsGrounded();
 
+
         //Animation check for our physics
-        //if (curPlayingClips.Length > 0)
-        //{
-        //    if (curPlayingClips[0].clip.name == "Attack" && isGrounded)
-        //        rb.velocity = new Vector2.(0, rb,velocity.y);
-        //    else
-        //    {
-        //        rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
-        //    }
-
-        //}
-
-
-
-        //grab horizontal axis - Check Project Settings > Input Manage4r to see the inputs defined 
-        float hInput = Input.GetAxis("Horizontal");
+        if (curPlayingClips.Length > 0)
+        {
+            if (curPlayingClips[0].clip.name == "Attack")
+            {
+                if (isGrounded)
+                    rb.velocity = Vector2.zero;
+                //new Vector2(0, rb.velocity.y);
+            }
+            else
+                rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
+        }
 
 
-        rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
-
+        //Button Input Checks
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetButtonDown("Fire1") && isGrounded)
+        if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("isAttacking");
+            if (!isGrounded && curPlayingClips[0].clip.name != "JumpAttack")
+            {
+                anim.SetTrigger("isJumpAttacking");
+            }
+            else if (!curPlayingClips[0].clip.name.Contains("Attack"))
+            {
+                anim.SetTrigger("isAttacking");
+            }
         }
 
-        if (Input.GetButtonDown("Fire1") && !isGrounded)
-        {
-            anim.SetTrigger("isJumpAttacking");
-        }
-
-        
-
+        //Sprite Flipping
         if (hInput != 0) sr.flipX = (hInput < 0);
-        //if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX) sr.flipX = !sr.flipX; {
+        //if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX) sr.flipX = !sr.flipX;
 
         anim.SetFloat("hInput", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
 
     }
+
+    /// <summary>
+    /// This function is used to check if we are grounded.  When we jump - we disable checking if we are grounded until our velocity reaches negative on the y-axis - this indicates that we are falling and we should start to check if we are grounded again. This is done to prevent us flipping to grounded when we jump through a platform.
+    /// </summary>
     void IsGrounded()
     {
         if (!isGrounded)
@@ -223,9 +170,18 @@ public class PlayerController : MonoBehaviour
         else
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
     }
+
     void IncreaseGravity()
     {
         rb.gravityScale = 10;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.Instance.lives--;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -237,5 +193,4 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
-
 }

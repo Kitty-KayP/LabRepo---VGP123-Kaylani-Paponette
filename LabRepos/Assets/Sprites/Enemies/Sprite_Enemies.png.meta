@@ -10589,7 +10589,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Squish
+      name: KoopaSquish
       rect:
         serializedVersion: 2
         x: 250
@@ -14590,9 +14590,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BombIdle: -800519198
-      Enemy Squish: 545477849
       EnemyProjectile: 792355171
       KoopaDeath: -1274632768
+      KoopaSquish: 545477849
       KoopaTurn: -1427186889
       KoopaWalk1: -1832221286
       KoopaWalk2: 745303551

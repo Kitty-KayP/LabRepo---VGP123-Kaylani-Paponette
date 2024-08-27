@@ -6,10 +6,12 @@ TagManager:
   tags:
   - OneUp
   - Enemy
-  - Projectile
   - Wall
   - Barrier
   - Squish
+  - PlayerProjectile
+  - Undefined
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
