@@ -76,18 +76,18 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().name == "Title")
-                SceneManager.LoadScene("Level");
-            else
+            if (SceneManager.GetActiveScene().name == "GameOver")
                 SceneManager.LoadScene("Title");
+            else
+                SceneManager.LoadScene("Level");
         }
 
     }
 
     void GameOver()
     {
-        Debug.Log("Game Over, change it to move to a specific level");
-        SceneManager.LoadScene("Title");
+        Debug.Log("Game Over, change it to move to a specific scene called Game Over");
+        SceneManager.LoadScene("GameOver");
     }
 
     void Respawn()

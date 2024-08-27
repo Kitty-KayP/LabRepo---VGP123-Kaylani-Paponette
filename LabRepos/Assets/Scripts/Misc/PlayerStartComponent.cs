@@ -10,7 +10,7 @@ public class PlayerStartComponent : MonoBehaviour
     void Start()
     {
         GameManager.Instance.SpawnPlayer(transform);
-        GameManager.Instance.lives = 5;
+        GameManager.Instance.lives = 3;
     }
 
 }

@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 373ac7e1ad595f745acd266e113815fb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Over
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 53
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7135775b05123468b72003ac04c139
+      internalID: -1468772515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time Up
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 53
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fef70c70c1939349a9f97d730ceec25
+      internalID: 342515776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 52
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cc06990ce596b449be4a616a07c302
+      internalID: -629854790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario Death
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 17
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb115c4135c5bc46b314b29e52ccfa8
+      internalID: -552180152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Continue: -629854790
+      Game Over: -1468772515
+      Mario Death: -552180152
+      Time Up: 342515776
+      gameovertimeup_10: -1092210678
+      gameovertimeup_11: 297894366
+      gameovertimeup_12: 515554491
+      gameovertimeup_13: 1218625459
+      gameovertimeup_14: 1779577964
+      gameovertimeup_15: -2079580645
+      gameovertimeup_16: -1678345251
+      gameovertimeup_17: -1211593845
+      gameovertimeup_18: -420385238
+      gameovertimeup_19: 612470875
+      gameovertimeup_20: 1303797897
+      gameovertimeup_21: -1234170041
+      gameovertimeup_22: -1064822761
+      gameovertimeup_23: 2143893346
+      gameovertimeup_24: 1779982330
+      gameovertimeup_25: 919326764
+      gameovertimeup_26: -2070495678
+      gameovertimeup_27: 148782070
+      gameovertimeup_28: -251445765
+      gameovertimeup_29: -1302005802
+      gameovertimeup_3: 708567372
+      gameovertimeup_30: 503046179
+      gameovertimeup_31: 409577729
+      gameovertimeup_32: 1747131327
+      gameovertimeup_33: -693471573
+      gameovertimeup_34: -1922175403
+      gameovertimeup_35: -1709903434
+      gameovertimeup_36: 494380459
+      gameovertimeup_37: -1470089315
+      gameovertimeup_38: 967245906
+      gameovertimeup_39: 961644959
+      gameovertimeup_4: 609727734
+      gameovertimeup_40: 646241159
+      gameovertimeup_41: 856725112
+      gameovertimeup_42: 1927194349
+      gameovertimeup_43: -714952821
+      gameovertimeup_44: -1146133083
+      gameovertimeup_45: 1804249004
+      gameovertimeup_46: 2013718779
+      gameovertimeup_47: 372141824
+      gameovertimeup_48: -203692215
+      gameovertimeup_49: -1059616146
+      gameovertimeup_5: -502769665
+      gameovertimeup_50: -1706816145
+      gameovertimeup_51: -1673836962
+      gameovertimeup_52: 1304152467
+      gameovertimeup_53: -945915709
+      gameovertimeup_54: -1285083272
+      gameovertimeup_55: 339213436
+      gameovertimeup_56: -1232728696
+      gameovertimeup_57: -1313550012
+      gameovertimeup_58: -2021259457
+      gameovertimeup_59: 330752482
+      gameovertimeup_6: 1170093600
+      gameovertimeup_60: 450025638
+      gameovertimeup_62: -1252865014
+      gameovertimeup_63: 32118301
+      gameovertimeup_64: -160003760
+      gameovertimeup_65: -1302971581
+      gameovertimeup_66: -850061473
+      gameovertimeup_67: -1379194614
+      gameovertimeup_68: -1352870240
+      gameovertimeup_69: 698211488
+      gameovertimeup_7: 1133826441
+      gameovertimeup_70: -1424447134
+      gameovertimeup_71: 200466442
+      gameovertimeup_72: 1628207238
+      gameovertimeup_73: -416432704
+      gameovertimeup_74: 1861308041
+      gameovertimeup_75: -1991412077
+      gameovertimeup_76: 1569316105
+      gameovertimeup_77: 1084491377
+      gameovertimeup_78: 2106063647
+      gameovertimeup_79: -1733378365
+      gameovertimeup_8: 1918055211
+      gameovertimeup_80: -1035208638
+      gameovertimeup_81: 882335437
+      gameovertimeup_82: -1918417663
+      gameovertimeup_83: 1969536976
+      gameovertimeup_84: 1976980670
+      gameovertimeup_85: -1667314463
+      gameovertimeup_86: 913676783
+      gameovertimeup_87: -1255482971
+      gameovertimeup_88: -621158349
+      gameovertimeup_89: 2015766797
+      gameovertimeup_9: -86795873
+      gameovertimeup_90: 987739580
+      gameovertimeup_91: 502721022
+      gameovertimeup_92: 2051569054
+      gameovertimeup_93: 87704305
+      gameovertimeup_94: -320305193
+      gameovertimeup_95: -1210695152
+      gameovertimeup_96: 160999255
+      gameovertimeup_97: 1257628272
+      gameovertimeup_98: -824081221
+      gameovertimeup_99: 1563924265
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
