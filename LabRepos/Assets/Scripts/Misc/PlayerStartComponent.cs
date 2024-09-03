@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStartComponent : MonoBehaviour
 {
-    public float startingLives = 5;
+    public float startingLives = 3;
 
     // Start is called before the first frame update
     void Start()
