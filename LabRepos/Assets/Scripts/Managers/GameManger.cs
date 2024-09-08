@@ -8,12 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => instance;
 
     public Action<int> OnLifeValueChanged;
-    //public UnityEvent<int> OnLifeValueChanged;
 
-    //Private Lives Variable
+    // Private Lives Variable
     private int _lives = 10;
 
-    //public variable for getting and setting lives
+    // Public variable for getting and setting lives
     public int lives
     {
         get
@@ -22,20 +21,20 @@ public class GameManager : MonoBehaviour
         }
         set
         {
-            //all lives lost (zero counts as a life due to the check)
+            // All lives lost (zero counts as a life due to the check)
             if (value < 0)
             {
                 GameOver();
                 return;
             }
 
-            //lost a life
+            // Lost a life
             if (value < _lives)
             {
                 Respawn();
             }
 
-            //cannot roll over max lives
+            // Cannot roll over max lives
             if (value > maxLives)
             {
                 value = maxLives;
@@ -48,7 +47,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //max lives that are possible
     [SerializeField] private int maxLives = 10;
     [SerializeField] private PlayerController playerPrefab;
 
@@ -57,46 +55,54 @@ public class GameManager : MonoBehaviour
     private Transform currentCheckpoint;
     private MenuController currentMenuController;
 
+    private bool isPaused = false; // Pause state variable
+
     private void Awake()
     {
-        //if we are the first instance of the gamemanager object - ensure that our instance variable is filled and we cannot be destroyed when loading new levels.
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            return; // early exit out of the function
+            return;
         }
-
-        //if we are down here in execution - that means that the above if statement didn't run - which means we are a clone
         Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        // Initialize anything you need on start
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!currentMenuController) return;
 
+        // Toggle pause when 'P' is pressed
         if (Input.GetKeyDown(KeyCode.P))
         {
-            currentMenuController.SetActiveState(MenuController.MenuStates.Pause);
+            TogglePause();
+        }
+    }
+
+    // Method to toggle pause and resume
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            // Pauses the game by setting the time scale to 0
+            Time.timeScale = 0f;
+            currentMenuController.SetActiveState(MenuController.MenuStates.Pause); // Activate pause menu
+        }
+        else
+        {
+            // Resumes the game by setting the time scale to 1
+            Time.timeScale = 1f;
+            currentMenuController.SetActiveState(MenuController.MenuStates.InGame); // Deactivate pause menu
         }
 
-
-
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    if (SceneManager.GetActiveScene().name == "Title")
-        //        SceneManager.LoadScene("Level");
-        //    else
-        //        SceneManager.LoadScene("Title");
-        //}
-
+        Debug.Log(isPaused ? "Game Paused" : "Game Resumed");
     }
 
     public void LoadScene(string sceneName)
