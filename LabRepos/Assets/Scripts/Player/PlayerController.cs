@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     //Audio Clip references
     [SerializeField] private AudioClip jumpClip;
     [SerializeField] private AudioClip stompClip;
-
+    [SerializeField] private AudioClip playerDeathClip;
     //AudioMixerCHannel reference
     public AudioMixerGroup SFXGroup;
 
@@ -203,6 +203,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             GameManager.Instance.lives--;
+            audioSource.PlayOneShot(playerDeathClip);
         }
     }
 
@@ -215,5 +216,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             audioSource.PlayOneShot(stompClip);
         }
+    }
+
+    public void MarioDeathAudio()
+    {
+        audioSource.PlayOneShot(playerDeathClip);
     }
 }

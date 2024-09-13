@@ -97,6 +97,11 @@ public class EnemyWalker : Enemy
         {
             rb.velocity = (sr.flipX) ? new Vector2(-xVel, rb.velocity.y) : new Vector2(xVel, rb.velocity.y);
         }
+
+        else if (curPlayingClips[0].clip.name.Contains("Death") || curPlayingClips[0].clip.name.Contains("Squish"))
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
+  deathClip: {fileID: 8300000, guid: 4d70033068a3bd34cb630767e4c392c1, type: 3}
   distThreshold: 0
   projectileFireRate: 1
 --- !u!95 &6711582766820976041

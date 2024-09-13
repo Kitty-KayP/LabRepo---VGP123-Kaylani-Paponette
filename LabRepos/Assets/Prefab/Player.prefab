@@ -267,6 +267,7 @@ MonoBehaviour:
     m_Bits: 8
   jumpClip: {fileID: 8300000, guid: 231734e64e42a0a498dbe90c162441c0, type: 3}
   stompClip: {fileID: 8300000, guid: 4d70033068a3bd34cb630767e4c392c1, type: 3}
+  playerDeathClip: {fileID: 8300000, guid: 43e81465275714a4dbeb4d9a3785fe62, type: 3}
   SFXGroup: {fileID: 0}
 --- !u!114 &-8368033623626517062
 MonoBehaviour:

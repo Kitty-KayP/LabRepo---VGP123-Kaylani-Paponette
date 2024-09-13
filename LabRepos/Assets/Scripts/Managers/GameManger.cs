@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Action<int> OnLifeValueChanged;
 
     // Private Lives Variable
-    private int _lives = 10;
+    private int _lives = 3;
 
     // Public variable for getting and setting lives
     public int lives
@@ -116,12 +116,13 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("Game Over, change it to move to a specific level");
+        Debug.Log("Game Over, Try Again");
         SceneManager.LoadScene("GameOver");
     }
 
     void Respawn()
     {
+        playerInstance.MarioDeathAudio();
         playerInstance.transform.position = currentCheckpoint.position;
     }
 
